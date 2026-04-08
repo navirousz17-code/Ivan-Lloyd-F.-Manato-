@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="booking.css">
+<link rel="stylesheet" href="icons/css/all.min.css">
+    <title>Book a Service</title>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline class="bg-vid">
+        <source src="images/matrix.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+    <div class="scanline"></div>
+
+    <div class="logo-container">
+        <img src="images/this.png" alt="Mustang Logo" class="logo">
+    </div>
+    <div class="success-overlay" id="booked">
+        <div class="success-box">
+            <span class="fc fc-tl"></span>
+            <span class="fc fc-tr"></span>
+            <span class="fc fc-bl"></span>
+            <span class="fc fc-br"></span>
+
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+
+            <h2 class="success-title">Booking Received!</h2>
+            <div class="success-divider"></div>
+
+            <p class="success-msg">
+                Thank you for reaching out. Our team will contact you within
+                <strong>24 hours</strong> to confirm your appointment.
+            </p>
+
+            <div class="success-note">
+                <i class="fas fa-envelope"></i>
+                Check your email for a confirmation shortly.
+            </div>
+
+            <div class="success-actions">
+                <a href="Services.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </a>
+                <a href="home.html" class="btn-home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="booking-main">
+
+        <div class="booking-left">
+            <div class="booking-eyebrow">
+                <i class="fas fa-calendar-check"></i> Schedule Your Visit
+            </div>
+            <h1 class="booking-title">Book a<br><span>Service</span></h1>
+            <div class="booking-divider"></div>
+            <p class="booking-subtitle">
+                Fill in the form and our team will confirm your appointment within 24 hours. Premium service, precision guaranteed.
+            </p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <div class="info-card-title">Location</div>
+                        <div class="info-card-desc">Bansud, Oriental Mindoro, PH</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <div class="info-card-title">Hours</div>
+                        <div class="info-card-desc">Mon – Sat · 8:00 AM – 6:00 PM</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <div class="info-card-title">Call Us</div>
+                        <div class="info-card-desc">+63 938 353 4908</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <div class="info-card-title">Guarantee</div>
+                        <div class="info-card-desc">100% Satisfaction · Free Re-service</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Services.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Services
+            </a>
+        </div>
+
+        <div class="booking-right">
+            <span class="fc fc-tl"></span>
+            <span class="fc fc-tr"></span>
+            <span class="fc fc-bl"></span>
+            <span class="fc fc-br"></span>
+
+            <div class="form-header">
+                <div class="form-header-label">APPOINTMENT FORM</div>
+            </div>
+
+            <form class="booking-form" action="#booked" method="GET">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">
+                            <i class="fas fa-user"></i> Full Name
+                        </label>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="Juan dela Cruz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class="fas fa-phone"></i> Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="+63 9XX XXX XXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" id="email" name="email"
+                           placeholder="yourname@email.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mustangModel">
+                            <i class="fas fa-horse"></i> Mustang Model
+                        </label>
+                        <select id="mustangModel" name="mustangModel" required>
+                            <option value="" disabled selected>Select Model</option>
+                            <option>GT</option>
+                            <option>Dark Horse</option>
+                            <option>Shelby GT500</option>
+                            <option>Mach-E</option>
+                            <option>Boss 302</option>
+                            <option>Cobra R</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">
+                            <i class="fas fa-calendar"></i> Year
+                        </label>
+                        <input type="number" id="year" name="year"
+                               placeholder="e.g. 2022" min="1964" max="2026" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">
+                            <i class="fas fa-wrench"></i> Service Type
+                        </label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select Service</option>
+                            <option>Performance Tuning</option>
+                            <option>Custom Body &amp; Paint</option>
+                            <option>Suspension &amp; Handling</option>
+                            <option>Tech &amp; Infotainment</option>
+                            <option>Detailing &amp; Maintenance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">
+                            <i class="fas fa-calendar-alt"></i> Preferred Date
+                        </label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-clock"></i> Preferred Time Slot</label>
+                    <div class="time-slots">
+                        <label class="time-slot">
+                            <input type="radio" name="timeSlot" value="8AM" required>
+                            <span>8:00 AM</span>
+                        </label>
+                        <label class="time-slot">
+                            <input type="radio" name="timeSlot" value="10AM">
+                            <span>10:00 AM</span>
+                        </label>
+                        <label class="time-slot">
+                            <input type="radio" name="timeSlot" value="12PM">
+                            <span>12:00 PM</span>
+                        </label>
+                        <label class="time-slot">
+                            <input type="radio" name="timeSlot" value="2PM">
+                            <span>2:00 PM</span>
+                        </label>
+                        <label class="time-slot">
+                            <input type="radio" name="timeSlot" value="4PM">
+                            <span>4:00 PM</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">
+                        <i class="fas fa-comment-alt"></i> Additional Notes
+                        <span class="optional">(optional)</span>
+                    </label>
+                    <textarea id="notes" name="notes" rows="3"
+                              placeholder="Describe any specific issues, requests, or modifications..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span class="btn-shine"></span>
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Confirm Booking</span>
+                    <i class="fas fa-arrow-right btn-arrow"></i>
+                </button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><i class="fas fa-car"></i>@ Mustang 2026. This Website is for Educational Purposes Only</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/FordMustang" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/user/FordMustang" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/FordMustang" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/fordmustang/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
